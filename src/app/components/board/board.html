@@ -1,0 +1,54 @@
+<!-- Board title -->
+<div class="board-title">
+  <h1>Jira Board</h1>
+</div>
+
+
+<!-- Add List button -->
+<div class="add-list-container">
+  <button
+    type="button"
+    (click)="addList()"
+  >
+    ADD LIST
+  </button>
+</div>
+
+
+<!-- Container for all lists -->
+<div class="board">
+
+  @for (list of lists; track $index) {
+
+    <!-- Individual list -->
+    <app-list
+      [list]="list"
+      (delete)="deleteList(list)"
+      (cardDelete)="deleteCard(list, $event)"
+      (allowDrop)="allowDrop($event)"
+      (drop)="dropCard(list)"
+      (addCard)="addCard(list)"
+      (dragStart)="startDrag(list, $event)"
+      (dragEnd)="endDrag()"
+    ></app-list>
+
+  }
+
+</div>
+
+
+<!-- Modal -->
+@if (showModal) {
+
+  <app-modal
+    [modalTitle]="modalTitle"
+    [modalType]="modalType"
+    [inputTitle]="inputTitle"
+    [inputDescription]="inputDescription"
+    (inputTitleChange)="inputTitle = $event"
+    (inputDescriptionChange)="inputDescription = $event"
+    (close)="closeModal()"
+    (save)="saveModal()"
+  ></app-modal>
+
+}

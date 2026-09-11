@@ -1,0 +1,47 @@
+<!-- List container -->
+<div
+  class="list"
+  (dragover)="allowDrop.emit($event)"
+  (drop)="drop.emit()"
+>
+
+  <!-- List header -->
+  <div class="list-header">
+
+    <!-- List name -->
+    <h2>{{ list.title }}</h2>
+
+    <!-- Delete list button -->
+    <button
+      type="button"
+      (click)="delete.emit()"
+    >
+      X
+    </button>
+
+  </div>
+
+ <!-- Cards container -->
+<div class="cards">
+
+    @for (card of list.cards; track $index) {
+  
+      <app-card
+  [card]="card"
+  (delete)="cardDelete.emit(card)"
+  (dragStart)="dragStart.emit(card)"
+  (dragEnd)="dragEnd.emit()"
+></app-card>
+    }
+  
+  </div>
+
+  <!-- Add card button -->
+  <button
+    type="button"
+    (click)="addCard.emit()"
+  >
+    +
+  </button>
+
+</div>

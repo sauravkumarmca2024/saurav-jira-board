@@ -1,0 +1,19 @@
+<div
+  class="card"
+  draggable="true"
+  (dragstart)="dragStart.emit()"
+  (dragend)="dragEnd.emit()"
+>
+    <div class="card-header">
+      <h3>{{ card.title }}</h3>
+  
+      <button type="button" (click)="delete.emit()">X</button>
+
+    </div>
+  
+    <p>{{ card.description }}</p>
+  
+    <p>
+      Created: {{ card.createdAt | date:'medium' }}
+    </p>
+  </div>

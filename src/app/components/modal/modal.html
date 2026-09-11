@@ -1,0 +1,76 @@
+<!-- Modal overlay -->
+<div class="modal-overlay">
+
+  <!-- Modal box -->
+  <div class="modal">
+
+    <!-- Modal header -->
+    <div class="modal-header">
+
+      <h2>{{ modalTitle }}</h2>
+
+      <button
+        type="button"
+        class="modal-close"
+        (click)="close.emit()"
+      >
+        X
+      </button>
+
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+
+      <label>
+        {{ modalType === 'card' ? 'Card Title' : 'List Name' }}
+      </label>
+
+      <input
+        type="text"
+        [ngModel]="inputTitle"
+        (ngModelChange)="inputTitleChange.emit($event)"
+        [placeholder]="modalType === 'card'
+          ? 'Enter card title...'
+          : 'Enter list name...'"
+      >
+
+      <!-- Description is only needed for cards -->
+      @if (modalType === 'card') {
+
+        <label>Description</label>
+
+        <textarea
+          [ngModel]="inputDescription"
+          (ngModelChange)="inputDescriptionChange.emit($event)"
+          placeholder="Enter card description..."
+        ></textarea>
+
+      }
+
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+
+      <button
+        type="button"
+        class="cancel-button"
+        (click)="close.emit()"
+      >
+        Cancel
+      </button>
+
+      <button
+        type="button"
+        class="save-button"
+        (click)="save.emit()"
+      >
+        {{ modalType === 'card' ? 'Add Card' : 'Add List' }}
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

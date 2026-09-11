@@ -1,0 +1,159 @@
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 30, 66, 0.54);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+/* Modal box */
+.modal {
+  width: 450px;
+  max-width: calc(100% - 40px);
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #172b4d;
+}
+
+/* Close button */
+.modal-close {
+  border: none;
+  background: transparent;
+  color: #5e6c84;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+}
+
+.modal-close:hover {
+  background: #dfe1e6;
+  color: #172b4d;
+}
+
+/* Modal body */
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body label {
+  display: block;
+  margin-bottom: 7px;
+  margin-top: 14px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.modal-body label:first-child {
+  margin-top: 0;
+}
+
+/* Input and textarea */
+.modal-body input,
+.modal-body textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px 12px;
+
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  outline: none;
+}
+
+.modal-body input:focus,
+.modal-body textarea:focus {
+  border-color: #0c66e4;
+  box-shadow: 0 0 0 2px rgba(12, 102, 228, 0.15);
+}
+
+.modal-body textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Modal footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  padding: 15px 20px;
+
+  border-top: 1px solid #dfe1e6;
+  background: #f4f5f7;
+}
+
+/* Cancel button */
+.cancel-button {
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #172b4d;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: #dfe1e6;
+}
+
+/* Save button */
+.save-button {
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #0c66e4;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background: #0055cc;
+}

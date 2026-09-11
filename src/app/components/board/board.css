@@ -1,0 +1,76 @@
+/* Main page */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f4f5f7;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Board title */
+.board-title {
+  text-align: center;
+  padding: 25px 20px 10px;
+}
+
+.board-title h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+
+/* Add List button */
+.add-list-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px 25px;
+}
+
+.add-list-container button {
+  background: #0c66e4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 13px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-list-container button:hover {
+  background: rgb(102, 43, 141);
+}
+
+
+/* Board */
+.board {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 10px 25px 40px;
+
+  overflow-x: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+  .board-title h1 {
+    font-size: 26px;
+  }
+
+  .add-list-container {
+    padding-right: 15px;
+  }
+
+  .board {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 12px;
+  }
+}
