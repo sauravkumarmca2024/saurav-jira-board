@@ -1,59 +1,69 @@
-# SauravJiraBoard
+# Jira Board - Vetty Assignment
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.7.
+A simple Jira-style task management board built with Angular.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Add and delete lists
+- Add and delete cards
+- Add card title, description and creation time
+- Drag and drop cards between lists
+- Newest cards appear first
+- Duplicate card titles are allowed
+- Data is saved using browser localStorage
+- Cards dropped outside a list stay in their original list
 
-```bash
+## Tech Stack
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+- HTML5 Drag and Drop API
+- Browser localStorage
+
+## Project Structure
+
+```text
+src/app/
+├── components/
+│   ├── board/       # Main board
+│   ├── list/        # List column
+│   ├── card/        # Individual card
+│   └── modal/       # Add list/card modal
+└── app.ts           # Root component
+Getting Started
+Prerequisites
+Node.js
+npm
+Angular CLI
+Installation
+
+Clone the repository:
+
+git clone https://github.com/sauravkumarmca2024/saurav-jira-board.git
+cd saurav-jira-board
+
+Install dependencies:
+
+npm install
+
+Start the application:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open the application at:
 
-## Code scaffolding
+http://localhost:4200/
+Build
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+To create a production build:
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
 ng build
-```
+Data Storage
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The application uses browser localStorage to save lists and cards. No backend or database is required.
 
-## Running unit tests
+Author
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Saurav Kumar
